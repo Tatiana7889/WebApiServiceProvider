@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WebApiService
+namespace ShowProduct
 {
     public class RouteConfig
     {
@@ -15,10 +15,9 @@ namespace WebApiService
 
             routes.MapRoute(
                 name: "Default",
-                url: "api/{controller}/{action}/{id}",
-                defaults: new {  action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Show", action = "GetAllProducts", id = UrlParameter.Optional }
             );
         }
     }
 }
-

@@ -12,6 +12,7 @@ namespace DataAccessLayer
         static DAL()
         {
             DbContext = new eCommerceEntities();
+           
         }
         public static List<Nop_Product> GetAllProducts()
         {

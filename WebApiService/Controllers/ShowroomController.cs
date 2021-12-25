@@ -14,10 +14,7 @@ namespace WebApiService.Controllers
     
     public class ShowroomController : ApiController
     {
-        public ShowroomController()
-        {
-
-        }
+        
         // GET: Showroom  
         [HttpGet]
         public JsonResult<List<Models.Product>> GetAllProducts()

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+namespace ShowProduct.Models
+{
 
-namespace WebApiService.Models
-{    
-    public partial class Product
-    {
+        public class Product
+        {
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
@@ -29,4 +29,4 @@ namespace WebApiService.Models
         public System.DateTime CreatedOn { get; set; }
         public System.DateTime UpdatedOn { get; set; }
     }
-}
+ }
