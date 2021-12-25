@@ -16,7 +16,7 @@ namespace WebApiService
             routes.MapRoute(
                 name: "Default",
                 url: "api/{controller}/{action}/{id}",
-                defaults: new { action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Show", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
