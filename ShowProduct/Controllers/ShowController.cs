@@ -11,6 +11,7 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Data;
+using ShowProduct.Models;
 
 namespace ShowProduct.Controllers
 {
@@ -35,7 +36,7 @@ namespace ShowProduct.Controllers
 
 
         }
-        //[HttpGet]
+      //  [HttpGet]
 
         public ActionResult GetProduct(int? id)
         {
@@ -51,9 +52,9 @@ namespace ShowProduct.Controllers
             {
                 return HttpNotFound();
             }
-     
-            return View(products);
-            
+            var jsonContent = JsonConvert.DeserializeObject<Product>(products);
+            return View(jsonContent);
+
         }
         //[HttpPost]  
         [HttpPost, ActionName("Edit")]
@@ -72,7 +73,10 @@ namespace ShowProduct.Controllers
             response.EnsureSuccessStatusCode();
             var products = response.Content.ReadAsStringAsync().Result;
             ViewBag.Title = "All Products";
-            return View(products);
+
+            var jsonContent = JsonConvert.DeserializeObject<Product>(products);
+
+            return View(jsonContent);
         }
         [HttpGet]
         public ActionResult Create()
