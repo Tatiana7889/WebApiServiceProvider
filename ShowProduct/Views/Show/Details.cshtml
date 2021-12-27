@@ -1,0 +1,22 @@
+﻿@model WebApiService.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="products">
+    <div class="container">
+        <div class="row">
+           
+
+            <div class="col-md-6 single-top-right vcenter">
+                <h3>@Model.Name</h3>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditProduct", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "GetAllProducts")
+</p>  

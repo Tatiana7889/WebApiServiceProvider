@@ -211,10 +211,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Show\About.cshtml" />
-    <Content Include="Views\Show\Contact.cshtml" />
-    <Content Include="Views\Show\Index.cshtml" />
     <Content Include="Views\Show\GetAllProducts.cshtml" />
+    <Content Include="Views\Show\Create.cshtml" />
+    <Content Include="Views\Show\Details.cshtml" />
+    <Content Include="Views\Show\GetProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -8,7 +8,6 @@ using WebApiService.Repository;
 using Newtonsoft.Json;
 using System.Web.Http;
 
-
 namespace WebApiService.Controllers
 {
     
@@ -52,6 +51,7 @@ namespace WebApiService.Controllers
 
         }
         [HttpPut]
+       
         public bool UpdateProduct(Models.Product product)
         {
             EntityMapper<Models.Product, DataAccessLayer.Nop_Product> mapObj = new EntityMapper<Models.Product, DataAccessLayer.Nop_Product>();

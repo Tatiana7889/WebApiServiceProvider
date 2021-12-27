@@ -18,6 +18,7 @@ namespace ShowProduct
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Show", action = "GetAllProducts", id = UrlParameter.Optional }
             );
+           
         }
     }
 }
